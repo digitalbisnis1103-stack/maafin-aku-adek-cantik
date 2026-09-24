@@ -1,0 +1,1292 @@
+/* ==========================================
+   GOOGLE FONT
+========================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Dancing+Script:wght@700&display=swap');
+
+/* ==========================================
+   RESET
+========================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    -webkit-tap-highlight-color:transparent;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    min-height:100vh;
+    overflow-x:hidden;
+    overflow-y:auto;
+
+    font-family:'Poppins',sans-serif;
+
+    background:linear-gradient(
+        180deg,
+        #FFD8EC 0%,
+        #FFB6D8 25%,
+        #FF87C2 55%,
+        #F65DA5 80%,
+        #E53D91 100%
+    );
+
+    background-attachment:fixed;
+}
+/* ==========================================
+   BACKGROUND BLUR
+========================================== */
+
+.bg-blur{
+
+    position:absolute;
+
+    border-radius:50%;
+
+    filter:blur(90px);
+
+    opacity:.55;
+
+    z-index:0;
+
+}
+
+.bg1{
+
+    width:320px;
+    height:320px;
+
+    background:#ffffff;
+
+    top:-80px;
+    left:-80px;
+
+}
+
+.bg2{
+
+    width:260px;
+    height:260px;
+
+    background:#ff79bb;
+
+    bottom:-80px;
+    right:-80px;
+
+}
+
+/* ==========================================
+   PAGE
+========================================== */
+
+.page{
+
+    position:absolute;
+
+    inset:0;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    flex-direction:column;
+
+    text-align:center;
+
+    padding:30px;
+
+    opacity:0;
+
+    visibility:hidden;
+
+    transform:translateY(35px);
+
+    transition:.6s ease;
+
+    z-index:5;
+
+}
+
+.page.active{
+
+    opacity:1;
+
+    visibility:visible;
+
+    transform:translateY(0);
+
+}
+
+/* ==========================================
+   LOTSO IMAGE
+========================================== */
+
+.lotso{
+
+    width:220px;
+
+    max-width:90%;
+
+    margin-bottom:25px;
+
+    filter:
+
+    drop-shadow(0 12px 25px rgba(0,0,0,.22));
+
+    transition:.4s;
+
+}
+
+.lotso:hover{
+
+    transform:scale(1.04);
+
+}
+
+.lotso-big{
+    width:170px;
+    max-width:70%;
+    margin-bottom:15px;
+}
+/* ==========================================
+   TITLE
+========================================== */
+
+h1{
+
+    font-family:'Dancing Script',cursive;
+
+    font-size:56px;
+
+    margin-bottom:15px;
+
+    text-shadow:
+
+    0 0 15px rgba(255,255,255,.45);
+
+}
+
+h2{
+
+    font-size:30px;
+
+    margin-bottom:15px;
+
+    font-weight:700;
+
+}
+
+/* ==========================================
+   TEXT
+========================================== */
+
+p{
+
+    width:100%;
+
+    max-width:390px;
+
+    line-height:1.9;
+
+    font-size:16px;
+
+    color:white;
+
+    opacity:.96;
+
+}
+
+/* ==========================================
+   BUTTON
+========================================== */
+
+button{
+
+    margin-top:28px;
+
+    border:none;
+
+    cursor:pointer;
+
+    padding:15px 36px;
+
+    border-radius:18px;
+
+    font-size:17px;
+
+    font-weight:600;
+
+    color:white;
+
+    background:
+
+    linear-gradient(
+    135deg,
+    #FF6CB5,
+    #E94195);
+
+    box-shadow:
+
+    0 12px 30px rgba(233,65,149,.35);
+
+    transition:.3s;
+
+}
+
+button:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:
+
+    0 18px 35px rgba(233,65,149,.45);
+
+}
+
+button:active{
+
+    transform:scale(.95);
+
+}
+
+/* ==========================================
+   BUTTON GROUP
+========================================== */
+
+.btn-group{
+
+    display:flex;
+
+    gap:15px;
+
+    flex-wrap:wrap;
+
+    justify-content:center;
+
+}
+
+/* ==========================================
+   GLASS CARD
+========================================== */
+
+.welcome{
+    width:90%;
+    max-width:340px;
+
+    padding:24px;
+
+    background:rgba(255,255,255,.15);
+    backdrop-filter:blur(18px);
+
+    border-radius:25px;
+
+    box-shadow:0 15px 40px rgba(0,0,0,.15);
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+
+    height:auto;
+}
+
+/* ==========================================
+   LETTER
+========================================== */
+
+.letter{
+
+    max-height:72vh;
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+.letter-scroll{
+
+    flex:1;
+
+    overflow:auto;
+
+    padding-right:8px;
+
+    text-align:left;
+
+    line-height:2;
+
+}
+
+.letter-scroll::-webkit-scrollbar{
+
+    width:0;
+
+}
+
+.letter-scroll{
+
+    scrollbar-width:none;
+
+}
+
+/* ==========================================
+   HEART METER
+========================================== */
+
+.heart-meter{
+
+    width:320px;
+
+    max-width:90%;
+
+    margin-bottom:35px;
+
+}
+
+.meter-text{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    margin-bottom:10px;
+
+    font-weight:600;
+
+}
+
+.meter{
+
+    width:100%;
+
+    height:14px;
+
+    border-radius:50px;
+
+    overflow:hidden;
+
+    background:
+
+    rgba(255,255,255,.25);
+
+}
+
+.meter-fill{
+
+    width:0%;
+
+    height:100%;
+
+    border-radius:50px;
+
+    background:
+
+    linear-gradient(
+    90deg,
+    #ff8bc8,
+    #ff4fa2);
+
+}
+
+.meter25{
+
+    width:25%;
+
+}
+
+.meter50{
+
+    width:50%;
+
+}
+
+.meter75{
+
+    width:75%;
+
+}
+
+.meter100{
+
+    width:100%;
+
+}
+
+/* ==========================================
+   FLOAT HEARTS CONTAINER
+========================================== */
+
+#floating-hearts{
+
+    position:fixed;
+
+    inset:0;
+
+    overflow:hidden;
+
+    pointer-events:none;
+
+    z-index:1;
+
+}
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media(max-width:768px){
+
+    h1{
+
+        font-size:44px;
+
+    }
+
+    h2{
+
+        font-size:25px;
+
+    }
+
+    p{
+
+        font-size:15px;
+
+    }
+
+    .lotso{
+
+        width:180px;
+
+    }
+
+    .lotso-big{
+
+    width:140px;
+
+    height:auto;
+
+    margin-bottom:15px;
+
+    object-fit:contain;
+
+}
+
+    .welcome,
+    .letter{
+
+        padding:25px;
+
+    }
+
+    button{
+
+        width:100%;
+
+    }
+
+}
+
+/* ==========================================
+   ENVELOPE 3D
+========================================== */
+
+.envelope-area{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    margin-top:20px;
+}
+
+.envelope{
+    position:relative;
+    width:320px;
+    height:220px;
+    cursor:pointer;
+    transition:.6s;
+    animation:floatEnvelope 3s ease-in-out infinite;
+}
+
+/* Badan Amplop */
+
+.envelope-body{
+    position:absolute;
+    inset:0;
+    background:linear-gradient(135deg,#ff95c8,#ff6ab2);
+    border-radius:0 0 18px 18px;
+    overflow:hidden;
+    box-shadow:0 20px 40px rgba(0,0,0,.2);
+}
+
+/* Tutup Amplop */
+
+.envelope-top{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:120px;
+    background:linear-gradient(135deg,#ff7abb,#ff4ea3);
+
+    clip-path:polygon(0 0,100% 0,50% 100%);
+    transform-origin:top;
+    transition:.8s;
+    z-index:5;
+}
+
+/* Surat */
+
+.letter-paper{
+
+    position:absolute;
+
+    left:50%;
+    bottom:10px;
+
+    transform:translateX(-50%);
+
+    width:270px;
+    height:170px;
+
+    border-radius:15px;
+
+    background:white;
+
+    color:#e94096;
+
+    padding:25px;
+
+    transition:.8s;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.15);
+
+    z-index:2;
+
+}
+
+.letter-paper h2{
+
+    color:#e94096;
+    margin-bottom:10px;
+
+}
+
+.letter-paper p{
+
+    color:#666;
+
+}
+
+/* Saat dibuka */
+
+.envelope.open .envelope-top{
+
+    transform:rotateX(180deg);
+
+}
+
+.envelope.open .letter-paper{
+
+    bottom:120px;
+
+}
+
+/* ==========================================
+   FLOAT
+========================================== */
+
+@keyframes floatEnvelope{
+
+    0%{
+
+        transform:translateY(0px);
+
+    }
+
+    50%{
+
+        transform:translateY(-10px);
+
+    }
+
+    100%{
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/* ==========================================
+   LOTSO FLOAT
+========================================== */
+
+.lotso{
+
+    animation:lotsoFloat 4s ease-in-out infinite;
+
+}
+
+@keyframes lotsoFloat{
+
+    0%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-12px);
+
+    }
+
+    100%{
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/* ==========================================
+   SPARKLE
+========================================== */
+
+.sparkles{
+
+    position:fixed;
+
+    inset:0;
+
+    pointer-events:none;
+
+    overflow:hidden;
+
+    z-index:2;
+
+}
+
+.sparkles::before,
+.sparkles::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:6px;
+    height:6px;
+
+    background:white;
+
+    border-radius:50%;
+
+    opacity:.8;
+
+    animation:sparkle 6s linear infinite;
+
+}
+
+.sparkles::before{
+
+    left:15%;
+    top:90%;
+
+}
+
+.sparkles::after{
+
+    right:20%;
+    top:100%;
+
+    animation-delay:3s;
+
+}
+
+@keyframes sparkle{
+
+    from{
+
+        transform:
+        translateY(0)
+        scale(0);
+
+        opacity:0;
+
+    }
+
+    30%{
+
+        opacity:1;
+
+        transform:
+        scale(1);
+
+    }
+
+    to{
+
+        transform:
+        translateY(-120vh)
+        scale(0);
+
+        opacity:0;
+
+    }
+
+}
+
+/* ==========================================
+   FLOAT HEART
+========================================== */
+
+.heart{
+
+    position:fixed;
+
+    bottom:-50px;
+
+    animation:heartUp linear forwards;
+
+    opacity:.7;
+
+    pointer-events:none;
+
+    z-index:2;
+
+}
+
+@keyframes heartUp{
+
+    from{
+
+        transform:
+        translateY(0)
+        rotate(0deg);
+
+    }
+
+    to{
+
+        transform:
+        translateY(-120vh)
+        rotate(360deg);
+
+    }
+
+}
+
+/* ==========================================
+   PAGE TRANSITION
+========================================== */
+
+.page{
+
+    transition:
+    opacity .7s,
+    transform .7s;
+
+}
+
+.page.active{
+
+    animation:pageFade .7s;
+
+}
+
+@keyframes pageFade{
+
+    from{
+
+        opacity:0;
+        transform:translateY(40px);
+
+    }
+
+    to{
+
+        opacity:1;
+        transform:translateY(0);
+
+    }
+
+}
+
+/* ==========================================
+   LETTER SCROLL
+========================================== */
+
+.letter-scroll{
+
+    scroll-behavior:smooth;
+
+}
+
+.letter-scroll p{
+
+    margin-bottom:18px;
+
+}
+
+/* ==========================================
+   PINK SHADOW
+========================================== */
+
+button{
+
+    box-shadow:
+    0 15px 35px rgba(233,65,149,.35);
+
+}
+
+button:hover{
+
+    box-shadow:
+    0 20px 40px rgba(233,65,149,.5);
+
+}
+
+/* ==========================================
+   HAPPY END
+========================================== */
+
+.happy{
+
+    animation:
+
+    lotsoFloat 3s ease-in-out infinite,
+
+    glowPink 2s ease-in-out infinite;
+
+}
+
+@keyframes glowPink{
+
+    0%{
+
+        filter:
+
+        drop-shadow(0 0 0px #ff75ba);
+
+    }
+
+    50%{
+
+        filter:
+
+        drop-shadow(0 0 18px #ff75ba);
+
+    }
+
+    100%{
+
+        filter:
+
+        drop-shadow(0 0 0px #ff75ba);
+
+    }
+
+}
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media(max-width:480px){
+
+.envelope{
+
+    width:270px;
+    height:190px;
+
+}
+
+.letter-paper{
+
+    width:220px;
+    height:145px;
+
+    padding:18px;
+
+}
+
+.letter-paper h2{
+
+    font-size:20px;
+
+}
+
+}
+
+/* ==========================================
+   MOBILE RESPONSIVE
+========================================== */
+
+@media screen and (max-width: 480px){
+
+    body{
+        overflow-x:hidden;
+    }
+
+    .page{
+        padding:16px;
+    }
+
+    /* CARD */
+    .welcome,
+    .letter{
+        width:100%;
+        max-width:330px;
+        padding:20px;
+        border-radius:24px;
+    }
+
+    /* LOTSO */
+    .lotso-big{
+        width:140px;
+        max-width:100%;
+        margin:0 auto 15px;
+    }
+
+    .lotso{
+        width:130px;
+        max-width:100%;
+        margin-bottom:18px;
+    }
+
+    /* JUDUL */
+    h1{
+        font-size:2.5rem;
+        line-height:1.1;
+        margin-bottom:12px;
+    }
+
+    h2{
+        font-size:1.4rem;
+        margin-bottom:10px;
+    }
+
+    /* PARAGRAF */
+    p{
+        max-width:100%;
+        font-size:14px;
+        line-height:1.8;
+    }
+
+    /* BUTTON */
+    button{
+        width:100%;
+        padding:14px;
+        font-size:15px;
+        margin-top:18px;
+    }
+
+    /* HEART METER */
+    .heart-meter{
+        width:100%;
+        max-width:300px;
+        margin-bottom:25px;
+    }
+
+    /* ENVELOPE */
+    .envelope{
+        width:260px;
+        height:180px;
+    }
+
+    .envelope-top{
+        height:95px;
+    }
+
+    .letter-paper{
+        width:210px;
+        height:135px;
+        padding:15px;
+        border-radius:14px;
+    }
+
+    .letter-paper h2{
+        font-size:18px;
+    }
+
+    .letter-paper p{
+        font-size:13px;
+    }
+
+    /* SURAT */
+    .letter{
+        max-height:75vh;
+    }
+
+    .letter-scroll{
+        font-size:14px;
+        line-height:1.8;
+    }
+
+}
+
+/* ==========================================
+   EXTRA SMALL DEVICE
+========================================== */
+
+@media screen and (max-width:360px){
+
+    .welcome,
+    .letter{
+        max-width:300px;
+        padding:18px;
+    }
+
+    .lotso-big{
+        width:120px;
+    }
+
+    .lotso{
+        width:115px;
+    }
+
+    h1{
+        font-size:2.2rem;
+    }
+
+    p{
+        font-size:13px;
+    }
+
+    .envelope{
+        width:230px;
+        height:165px;
+    }
+
+    .letter-paper{
+        width:185px;
+        height:120px;
+    }
+
+    button{
+        font-size:14px;
+        padding:12px;
+    }
+
+}
+
+/* ===========================
+   ENVELOPE PNG
+=========================== */
+
+.envelope-area{
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    margin-top:25px;
+
+}
+
+.envelope-img{
+
+    width:260px;
+
+    max-width:85%;
+
+    cursor:pointer;
+
+    transition:.35s ease;
+
+    filter:
+    drop-shadow(0 15px 30px rgba(0,0,0,.18));
+
+}
+
+.envelope-img:hover{
+
+    transform:
+    scale(1.05);
+
+}
+
+.envelope-img:active{
+
+    transform:
+    scale(.95);
+
+}
+
+/* =========================================
+   PAGE 5 - FOTO
+========================================= */
+
+#page5 {
+    text-align: center;
+}
+
+
+/* Judul */
+
+#page5 .photo-title {
+    width: 100%;
+
+    margin: 5px 0 4px;
+
+    text-align: center;
+
+    font-family: 'Dancing Script', cursive;
+
+    font-size: 30px;
+
+    line-height: 1.2;
+}
+
+
+/* Subtitle */
+
+#page5 .photo-subtitle {
+    width: 100%;
+
+    margin: 0 0 17px;
+
+    text-align: center;
+
+    font-size: 11px;
+
+    opacity: 0.75;
+}
+
+
+/* =========================================
+   GRID FOTO
+========================================= */
+
+#page5 .photo-grid {
+
+    width: 100%;
+
+    max-width: 310px;
+
+    margin: 0 auto 20px;
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 10px;
+
+    justify-content: center;
+
+    align-items: center;
+}
+
+
+/* =========================================
+   FOTO
+========================================= */
+
+#page5 .photo-card {
+
+    width: 100%;
+
+    aspect-ratio: 3 / 4;
+
+    padding: 4px;
+
+    background: #ffffff;
+
+    border-radius: 13px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 6px 16px rgba(0, 0, 0, 0.10);
+
+    margin: 0;
+}
+
+
+/* Gambar portrait */
+
+#page5 .photo-card img {
+
+    width: 100%;
+
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    object-position: center;
+
+    border-radius: 9px;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 480px) {
+
+    #page5 .photo-title {
+        font-size: 27px;
+    }
+
+    #page5 .photo-subtitle {
+        font-size: 10px;
+
+        margin-bottom: 14px;
+    }
+
+    #page5 .photo-grid {
+
+        width: 100%;
+
+        max-width: 285px;
+
+        gap: 9px;
+
+        margin-left: auto;
+
+        margin-right: auto;
+    }
+
+    #page5 .photo-card {
+
+        padding: 4px;
+
+        border-radius: 11px;
+    }
+
+    #page5 .photo-card img {
+
+        border-radius: 7px;
+    }
+
+}
+
+
+/* =========================================
+   HP KECIL
+========================================= */
+
+@media (max-width: 360px) {
+
+    #page5 .photo-grid {
+
+        max-width: 265px;
+
+        gap: 8px;
+    }
+
+    #page5 .photo-title {
+
+        font-size: 25px;
+    }
+
+}
